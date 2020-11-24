@@ -1,0 +1,531 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[v F426 `(v ~T0 @X0 0 tf ]
+"21 mcc_generated_files/examples/i2c1_master_example.c
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 21:     while(!I2C1_Open(address));
+[c E353 0 1 2 .. ]
+[n E353 . I2C1_NOERR I2C1_BUSY I2C1_FAIL  ]
+"55 mcc_generated_files/examples/../i2c1_master.h
+[; ;mcc_generated_files/examples/../i2c1_master.h: 55: i2c1_error_t I2C1_Open(i2c1_address_t address);
+[v _I2C1_Open `(E353 ~T0 @X0 0 ef1`uc ]
+"22 mcc_generated_files/examples/i2c1_master_example.c
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 22:     I2C1_SetDataCompleteCallback(rd1RegCompleteHandler,&returnValue);
+[c E358 1 2 3 4 5 .. ]
+[n E358 . I2C1_STOP I2C1_RESTART_READ I2C1_RESTART_WRITE I2C1_CONTINUE I2C1_RESET_LINK  ]
+[v F391 `(E358 ~T0 @X0 0 tf1`*v ]
+"118 mcc_generated_files/examples/../i2c1_master.h
+[; ;mcc_generated_files/examples/../i2c1_master.h: 118: void I2C1_SetDataCompleteCallback(i2c1_callback_t cb, void *ptr);
+[v _I2C1_SetDataCompleteCallback `(v ~T0 @X0 0 ef2`*F391`*v ]
+"10 mcc_generated_files/examples/i2c1_master_example.c
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 10: static i2c1_operations_t rd1RegCompleteHandler(void *ptr);
+[v _rd1RegCompleteHandler `(E358 ~T0 @X0 0 sf1`*v ]
+"106 mcc_generated_files/examples/../i2c1_master.h
+[; ;mcc_generated_files/examples/../i2c1_master.h: 106: void I2C1_SetBuffer(void *buffer, size_t bufferSize);
+[v _I2C1_SetBuffer `(v ~T0 @X0 0 ef2`*v`ui ]
+[v F405 `(E358 ~T0 @X0 0 tf1`*v ]
+"138
+[; ;mcc_generated_files/examples/../i2c1_master.h: 138: void I2C1_SetAddressNackCallback(i2c1_callback_t cb, void *ptr);
+[v _I2C1_SetAddressNackCallback `(v ~T0 @X0 0 ef2`*F405`*v ]
+[v F478 `(E358 ~T0 @X0 0 tf1`*v ]
+"82
+[; ;mcc_generated_files/examples/../i2c1_master.h: 82: i2c1_error_t I2C1_MasterWrite(void);
+[v _I2C1_MasterWrite `(E353 ~T0 @X0 0 ef ]
+"65
+[; ;mcc_generated_files/examples/../i2c1_master.h: 65: i2c1_error_t I2C1_Close(void);
+[v _I2C1_Close `(E353 ~T0 @X0 0 ef ]
+"11 mcc_generated_files/examples/i2c1_master_example.c
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 11: static i2c1_operations_t rd2RegCompleteHandler(void *ptr);
+[v _rd2RegCompleteHandler `(E358 ~T0 @X0 0 sf1`*v ]
+[v F486 `(E358 ~T0 @X0 0 tf1`*v ]
+"12
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 12: static i2c1_operations_t wr1RegCompleteHandler(void *ptr);
+[v _wr1RegCompleteHandler `(E358 ~T0 @X0 0 sf1`*v ]
+[v F494 `(E358 ~T0 @X0 0 tf1`*v ]
+"13
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 13: static i2c1_operations_t wr2RegCompleteHandler(void *ptr);
+[v _wr2RegCompleteHandler `(E358 ~T0 @X0 0 sf1`*v ]
+[v F502 `(E358 ~T0 @X0 0 tf1`*v ]
+[v F508 `(E358 ~T0 @X0 0 tf1`*v ]
+"87 mcc_generated_files/examples/../i2c1_master.h
+[; ;mcc_generated_files/examples/../i2c1_master.h: 87: i2c1_error_t I2C1_MasterRead(void);
+[v _I2C1_MasterRead `(E353 ~T0 @X0 0 ef ]
+"5 mcc_generated_files/examples/i2c1_master_example.c
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 5: {
+[s S3 `ui 1 `*uc 1 ]
+[n S3 . len data ]
+"14
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 14: static i2c1_operations_t rdBlkRegCompleteHandler(void *ptr);
+[v _rdBlkRegCompleteHandler `(E358 ~T0 @X0 0 sf1`*v ]
+[v F522 `(E358 ~T0 @X0 0 tf1`*v ]
+[v F526 `(E358 ~T0 @X0 0 tf1`*v ]
+[v F530 `(E358 ~T0 @X0 0 tf1`*v ]
+[v F534 `(E358 ~T0 @X0 0 tf1`*v ]
+[v F538 `(E358 ~T0 @X0 0 tf1`*v ]
+[v F542 `(E358 ~T0 @X0 0 tf1`*v ]
+"167 mcc_generated_files/examples/../i2c1_master.h
+[; ;mcc_generated_files/examples/../i2c1_master.h: 167: void (*MSSP1_InterruptHandler)(void);
+[v _MSSP1_InterruptHandler `*F426 ~T0 @X0 1 e ]
+"17 mcc_generated_files/examples/i2c1_master_example.c
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 17: uint8_t I2C1_Read1ByteRegister(i2c1_address_t address, uint8_t reg)
+[v _I2C1_Read1ByteRegister `(uc ~T0 @X0 1 ef2`uc`uc ]
+"18
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 18: {
+{
+[e :U _I2C1_Read1ByteRegister ]
+"17
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 17: uint8_t I2C1_Read1ByteRegister(i2c1_address_t address, uint8_t reg)
+[v _address `uc ~T0 @X0 1 r1 ]
+[v _reg `uc ~T0 @X0 1 r2 ]
+"18
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 18: {
+[f ]
+"19
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 19:     uint8_t returnValue = 0x00;
+[v _returnValue `uc ~T0 @X0 1 a ]
+[e = _returnValue -> -> 0 `i `uc ]
+"21
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 21:     while(!I2C1_Open(address));
+[e $U 5  ]
+[e :U 6 ]
+[e :U 5 ]
+[e $ ! != -> ( _I2C1_Open (1 _address `ui -> -> 0 `i `ui 6  ]
+[e :U 7 ]
+"22
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 22:     I2C1_SetDataCompleteCallback(rd1RegCompleteHandler,&returnValue);
+[e ( _I2C1_SetDataCompleteCallback (2 , &U _rd1RegCompleteHandler -> &U _returnValue `*v ]
+"23
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 23:     I2C1_SetBuffer(&reg,1);
+[e ( _I2C1_SetBuffer (2 , -> &U _reg `*v -> -> 1 `i `ui ]
+"24
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 24:     I2C1_SetAddressNackCallback(((void*)0),((void*)0));
+[e ( _I2C1_SetAddressNackCallback (2 , -> -> -> 0 `i `*v `*F478 -> -> 0 `i `*v ]
+"25
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 25:     I2C1_MasterWrite();
+[e ( _I2C1_MasterWrite ..  ]
+"26
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 26:     while(I2C1_BUSY == I2C1_Close());
+[e $U 8  ]
+[e :U 9 ]
+[e :U 8 ]
+[e $ == -> . `E353 1 `ui -> ( _I2C1_Close ..  `ui 9  ]
+[e :U 10 ]
+"28
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 28:     return returnValue;
+[e ) _returnValue ]
+[e $UE 4  ]
+"29
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 29: }
+[e :UE 4 ]
+}
+"31
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 31: uint16_t I2C1_Read2ByteRegister(i2c1_address_t address, uint8_t reg)
+[v _I2C1_Read2ByteRegister `(us ~T0 @X0 1 ef2`uc`uc ]
+"32
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 32: {
+{
+[e :U _I2C1_Read2ByteRegister ]
+"31
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 31: uint16_t I2C1_Read2ByteRegister(i2c1_address_t address, uint8_t reg)
+[v _address `uc ~T0 @X0 1 r1 ]
+[v _reg `uc ~T0 @X0 1 r2 ]
+"32
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 32: {
+[f ]
+"33
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 33:     uint16_t returnValue =0x00;
+[v _returnValue `us ~T0 @X0 1 a ]
+[e = _returnValue -> -> 0 `i `us ]
+"35
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 35:     while(!I2C1_Open(address));
+[e $U 12  ]
+[e :U 13 ]
+[e :U 12 ]
+[e $ ! != -> ( _I2C1_Open (1 _address `ui -> -> 0 `i `ui 13  ]
+[e :U 14 ]
+"36
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 36:     I2C1_SetDataCompleteCallback(rd2RegCompleteHandler,&returnValue);
+[e ( _I2C1_SetDataCompleteCallback (2 , &U _rd2RegCompleteHandler -> &U _returnValue `*v ]
+"37
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 37:     I2C1_SetBuffer(&reg,1);
+[e ( _I2C1_SetBuffer (2 , -> &U _reg `*v -> -> 1 `i `ui ]
+"38
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 38:     I2C1_SetAddressNackCallback(((void*)0),((void*)0));
+[e ( _I2C1_SetAddressNackCallback (2 , -> -> -> 0 `i `*v `*F486 -> -> 0 `i `*v ]
+"39
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 39:     I2C1_MasterWrite();
+[e ( _I2C1_MasterWrite ..  ]
+"40
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 40:     while(I2C1_BUSY == I2C1_Close());
+[e $U 15  ]
+[e :U 16 ]
+[e :U 15 ]
+[e $ == -> . `E353 1 `ui -> ( _I2C1_Close ..  `ui 16  ]
+[e :U 17 ]
+"42
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 42:     return (returnValue << 8 | returnValue >> 8);
+[e ) -> | << -> _returnValue `ui -> 8 `i >> -> _returnValue `ui -> 8 `i `us ]
+[e $UE 11  ]
+"43
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 43: }
+[e :UE 11 ]
+}
+"45
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 45: void I2C1_Write1ByteRegister(i2c1_address_t address, uint8_t reg, uint8_t data)
+[v _I2C1_Write1ByteRegister `(v ~T0 @X0 1 ef3`uc`uc`uc ]
+"46
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 46: {
+{
+[e :U _I2C1_Write1ByteRegister ]
+"45
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 45: void I2C1_Write1ByteRegister(i2c1_address_t address, uint8_t reg, uint8_t data)
+[v _address `uc ~T0 @X0 1 r1 ]
+[v _reg `uc ~T0 @X0 1 r2 ]
+[v _data `uc ~T0 @X0 1 r3 ]
+"46
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 46: {
+[f ]
+"47
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 47:     while(!I2C1_Open(address));
+[e $U 19  ]
+[e :U 20 ]
+[e :U 19 ]
+[e $ ! != -> ( _I2C1_Open (1 _address `ui -> -> 0 `i `ui 20  ]
+[e :U 21 ]
+"48
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 48:     I2C1_SetDataCompleteCallback(wr1RegCompleteHandler,&data);
+[e ( _I2C1_SetDataCompleteCallback (2 , &U _wr1RegCompleteHandler -> &U _data `*v ]
+"49
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 49:     I2C1_SetBuffer(&reg,1);
+[e ( _I2C1_SetBuffer (2 , -> &U _reg `*v -> -> 1 `i `ui ]
+"50
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 50:     I2C1_SetAddressNackCallback(((void*)0),((void*)0));
+[e ( _I2C1_SetAddressNackCallback (2 , -> -> -> 0 `i `*v `*F494 -> -> 0 `i `*v ]
+"51
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 51:     I2C1_MasterWrite();
+[e ( _I2C1_MasterWrite ..  ]
+"52
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 52:     while(I2C1_BUSY == I2C1_Close());
+[e $U 22  ]
+[e :U 23 ]
+[e :U 22 ]
+[e $ == -> . `E353 1 `ui -> ( _I2C1_Close ..  `ui 23  ]
+[e :U 24 ]
+"53
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 53: }
+[e :UE 18 ]
+}
+"55
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 55: void I2C1_Write2ByteRegister(i2c1_address_t address, uint8_t reg, uint16_t data)
+[v _I2C1_Write2ByteRegister `(v ~T0 @X0 1 ef3`uc`uc`us ]
+"56
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 56: {
+{
+[e :U _I2C1_Write2ByteRegister ]
+"55
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 55: void I2C1_Write2ByteRegister(i2c1_address_t address, uint8_t reg, uint16_t data)
+[v _address `uc ~T0 @X0 1 r1 ]
+[v _reg `uc ~T0 @X0 1 r2 ]
+[v _data `us ~T0 @X0 1 r3 ]
+"56
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 56: {
+[f ]
+"57
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 57:     while(!I2C1_Open(address));
+[e $U 26  ]
+[e :U 27 ]
+[e :U 26 ]
+[e $ ! != -> ( _I2C1_Open (1 _address `ui -> -> 0 `i `ui 27  ]
+[e :U 28 ]
+"58
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 58:     I2C1_SetDataCompleteCallback(wr2RegCompleteHandler,&data);
+[e ( _I2C1_SetDataCompleteCallback (2 , &U _wr2RegCompleteHandler -> &U _data `*v ]
+"59
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 59:     I2C1_SetBuffer(&reg,1);
+[e ( _I2C1_SetBuffer (2 , -> &U _reg `*v -> -> 1 `i `ui ]
+"60
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 60:     I2C1_SetAddressNackCallback(((void*)0),((void*)0));
+[e ( _I2C1_SetAddressNackCallback (2 , -> -> -> 0 `i `*v `*F502 -> -> 0 `i `*v ]
+"61
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 61:     I2C1_MasterWrite();
+[e ( _I2C1_MasterWrite ..  ]
+"62
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 62:     while(I2C1_BUSY == I2C1_Close());
+[e $U 29  ]
+[e :U 30 ]
+[e :U 29 ]
+[e $ == -> . `E353 1 `ui -> ( _I2C1_Close ..  `ui 30  ]
+[e :U 31 ]
+"63
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 63: }
+[e :UE 25 ]
+}
+"65
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 65: void I2C1_WriteNBytes(i2c1_address_t address, uint8_t* data, size_t len)
+[v _I2C1_WriteNBytes `(v ~T0 @X0 1 ef3`uc`*uc`ui ]
+"66
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 66: {
+{
+[e :U _I2C1_WriteNBytes ]
+"65
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 65: void I2C1_WriteNBytes(i2c1_address_t address, uint8_t* data, size_t len)
+[v _address `uc ~T0 @X0 1 r1 ]
+[v _data `*uc ~T0 @X0 1 r2 ]
+[v _len `ui ~T0 @X0 1 r3 ]
+"66
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 66: {
+[f ]
+"67
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 67:     while(!I2C1_Open(address));
+[e $U 33  ]
+[e :U 34 ]
+[e :U 33 ]
+[e $ ! != -> ( _I2C1_Open (1 _address `ui -> -> 0 `i `ui 34  ]
+[e :U 35 ]
+"68
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 68:     I2C1_SetBuffer(data,len);
+[e ( _I2C1_SetBuffer (2 , -> _data `*v _len ]
+"69
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 69:     I2C1_SetAddressNackCallback(((void*)0),((void*)0));
+[e ( _I2C1_SetAddressNackCallback (2 , -> -> -> 0 `i `*v `*F508 -> -> 0 `i `*v ]
+"70
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 70:     I2C1_MasterWrite();
+[e ( _I2C1_MasterWrite ..  ]
+"71
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 71:     while(I2C1_BUSY == I2C1_Close());
+[e $U 36  ]
+[e :U 37 ]
+[e :U 36 ]
+[e $ == -> . `E353 1 `ui -> ( _I2C1_Close ..  `ui 37  ]
+[e :U 38 ]
+"72
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 72: }
+[e :UE 32 ]
+}
+"74
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 74: void I2C1_ReadNBytes(i2c1_address_t address, uint8_t *data, size_t len)
+[v _I2C1_ReadNBytes `(v ~T0 @X0 1 ef3`uc`*uc`ui ]
+"75
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 75: {
+{
+[e :U _I2C1_ReadNBytes ]
+"74
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 74: void I2C1_ReadNBytes(i2c1_address_t address, uint8_t *data, size_t len)
+[v _address `uc ~T0 @X0 1 r1 ]
+[v _data `*uc ~T0 @X0 1 r2 ]
+[v _len `ui ~T0 @X0 1 r3 ]
+"75
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 75: {
+[f ]
+"76
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 76:     while(!I2C1_Open(address));
+[e $U 40  ]
+[e :U 41 ]
+[e :U 40 ]
+[e $ ! != -> ( _I2C1_Open (1 _address `ui -> -> 0 `i `ui 41  ]
+[e :U 42 ]
+"77
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 77:     I2C1_SetBuffer(data,len);
+[e ( _I2C1_SetBuffer (2 , -> _data `*v _len ]
+"78
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 78:     I2C1_MasterRead();
+[e ( _I2C1_MasterRead ..  ]
+"79
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 79:     while(I2C1_BUSY == I2C1_Close());
+[e $U 43  ]
+[e :U 44 ]
+[e :U 43 ]
+[e $ == -> . `E353 1 `ui -> ( _I2C1_Close ..  `ui 44  ]
+[e :U 45 ]
+"80
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 80: }
+[e :UE 39 ]
+}
+"82
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 82: void I2C1_ReadDataBlock(i2c1_address_t address, uint8_t reg, uint8_t *data, size_t len)
+[v _I2C1_ReadDataBlock `(v ~T0 @X0 1 ef4`uc`uc`*uc`ui ]
+"83
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 83: {
+{
+[e :U _I2C1_ReadDataBlock ]
+"82
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 82: void I2C1_ReadDataBlock(i2c1_address_t address, uint8_t reg, uint8_t *data, size_t len)
+[v _address `uc ~T0 @X0 1 r1 ]
+[v _reg `uc ~T0 @X0 1 r2 ]
+[v _data `*uc ~T0 @X0 1 r3 ]
+[v _len `ui ~T0 @X0 1 r4 ]
+"83
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 83: {
+[f ]
+"84
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 84:     i2c1_buffer_t bufferBlock;
+[v _bufferBlock `S3 ~T0 @X0 1 a ]
+"85
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 85:     bufferBlock.data = data;
+[e = . _bufferBlock 1 _data ]
+"86
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 86:     bufferBlock.len = len;
+[e = . _bufferBlock 0 _len ]
+"88
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 88:     while(!I2C1_Open(address));
+[e $U 47  ]
+[e :U 48 ]
+[e :U 47 ]
+[e $ ! != -> ( _I2C1_Open (1 _address `ui -> -> 0 `i `ui 48  ]
+[e :U 49 ]
+"89
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 89:     I2C1_SetDataCompleteCallback(rdBlkRegCompleteHandler,&bufferBlock);
+[e ( _I2C1_SetDataCompleteCallback (2 , &U _rdBlkRegCompleteHandler -> &U _bufferBlock `*v ]
+"90
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 90:     I2C1_SetBuffer(&reg,1);
+[e ( _I2C1_SetBuffer (2 , -> &U _reg `*v -> -> 1 `i `ui ]
+"91
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 91:     I2C1_SetAddressNackCallback(((void*)0),((void*)0));
+[e ( _I2C1_SetAddressNackCallback (2 , -> -> -> 0 `i `*v `*F522 -> -> 0 `i `*v ]
+"92
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 92:     I2C1_MasterWrite();
+[e ( _I2C1_MasterWrite ..  ]
+"93
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 93:     while(I2C1_BUSY == I2C1_Close());
+[e $U 50  ]
+[e :U 51 ]
+[e :U 50 ]
+[e $ == -> . `E353 1 `ui -> ( _I2C1_Close ..  `ui 51  ]
+[e :U 52 ]
+"94
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 94: }
+[e :UE 46 ]
+}
+"96
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 96: static i2c1_operations_t rd1RegCompleteHandler(void *ptr)
+[v _rd1RegCompleteHandler `(E358 ~T0 @X0 1 sf1`*v ]
+"97
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 97: {
+{
+[e :U _rd1RegCompleteHandler ]
+"96
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 96: static i2c1_operations_t rd1RegCompleteHandler(void *ptr)
+[v _ptr `*v ~T0 @X0 1 r1 ]
+"97
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 97: {
+[f ]
+"98
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 98:     I2C1_SetBuffer(ptr,1);
+[e ( _I2C1_SetBuffer (2 , _ptr -> -> 1 `i `ui ]
+"99
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 99:     I2C1_SetDataCompleteCallback(((void*)0),((void*)0));
+[e ( _I2C1_SetDataCompleteCallback (2 , -> -> -> 0 `i `*v `*F526 -> -> 0 `i `*v ]
+"100
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 100:     return I2C1_RESTART_READ;
+[e ) . `E358 1 ]
+[e $UE 53  ]
+"101
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 101: }
+[e :UE 53 ]
+}
+"103
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 103: static i2c1_operations_t rd2RegCompleteHandler(void *ptr)
+[v _rd2RegCompleteHandler `(E358 ~T0 @X0 1 sf1`*v ]
+"104
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 104: {
+{
+[e :U _rd2RegCompleteHandler ]
+"103
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 103: static i2c1_operations_t rd2RegCompleteHandler(void *ptr)
+[v _ptr `*v ~T0 @X0 1 r1 ]
+"104
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 104: {
+[f ]
+"105
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 105:     I2C1_SetBuffer(ptr,2);
+[e ( _I2C1_SetBuffer (2 , _ptr -> -> 2 `i `ui ]
+"106
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 106:     I2C1_SetDataCompleteCallback(((void*)0),((void*)0));
+[e ( _I2C1_SetDataCompleteCallback (2 , -> -> -> 0 `i `*v `*F530 -> -> 0 `i `*v ]
+"107
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 107:     return I2C1_RESTART_READ;
+[e ) . `E358 1 ]
+[e $UE 54  ]
+"108
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 108: }
+[e :UE 54 ]
+}
+"110
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 110: static i2c1_operations_t wr1RegCompleteHandler(void *ptr)
+[v _wr1RegCompleteHandler `(E358 ~T0 @X0 1 sf1`*v ]
+"111
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 111: {
+{
+[e :U _wr1RegCompleteHandler ]
+"110
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 110: static i2c1_operations_t wr1RegCompleteHandler(void *ptr)
+[v _ptr `*v ~T0 @X0 1 r1 ]
+"111
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 111: {
+[f ]
+"112
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 112:     I2C1_SetBuffer(ptr,1);
+[e ( _I2C1_SetBuffer (2 , _ptr -> -> 1 `i `ui ]
+"113
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 113:     I2C1_SetDataCompleteCallback(((void*)0),((void*)0));
+[e ( _I2C1_SetDataCompleteCallback (2 , -> -> -> 0 `i `*v `*F534 -> -> 0 `i `*v ]
+"114
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 114:     return I2C1_CONTINUE;
+[e ) . `E358 3 ]
+[e $UE 55  ]
+"115
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 115: }
+[e :UE 55 ]
+}
+"117
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 117: static i2c1_operations_t wr2RegCompleteHandler(void *ptr)
+[v _wr2RegCompleteHandler `(E358 ~T0 @X0 1 sf1`*v ]
+"118
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 118: {
+{
+[e :U _wr2RegCompleteHandler ]
+"117
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 117: static i2c1_operations_t wr2RegCompleteHandler(void *ptr)
+[v _ptr `*v ~T0 @X0 1 r1 ]
+"118
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 118: {
+[f ]
+"119
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 119:     I2C1_SetBuffer(ptr,2);
+[e ( _I2C1_SetBuffer (2 , _ptr -> -> 2 `i `ui ]
+"120
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 120:     I2C1_SetDataCompleteCallback(((void*)0),((void*)0));
+[e ( _I2C1_SetDataCompleteCallback (2 , -> -> -> 0 `i `*v `*F538 -> -> 0 `i `*v ]
+"121
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 121:     return I2C1_CONTINUE;
+[e ) . `E358 3 ]
+[e $UE 56  ]
+"122
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 122: }
+[e :UE 56 ]
+}
+"124
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 124: static i2c1_operations_t rdBlkRegCompleteHandler(void *ptr)
+[v _rdBlkRegCompleteHandler `(E358 ~T0 @X0 1 sf1`*v ]
+"125
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 125: {
+{
+[e :U _rdBlkRegCompleteHandler ]
+"124
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 124: static i2c1_operations_t rdBlkRegCompleteHandler(void *ptr)
+[v _ptr `*v ~T0 @X0 1 r1 ]
+"125
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 125: {
+[f ]
+"126
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 126:     I2C1_SetBuffer(((i2c1_buffer_t *)ptr)->data,((i2c1_buffer_t*)ptr)->len);
+[e ( _I2C1_SetBuffer (2 , -> . *U -> _ptr `*S3 1 `*v . *U -> _ptr `*S3 0 ]
+"127
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 127:     I2C1_SetDataCompleteCallback(((void*)0),((void*)0));
+[e ( _I2C1_SetDataCompleteCallback (2 , -> -> -> 0 `i `*v `*F542 -> -> 0 `i `*v ]
+"128
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 128:     return I2C1_RESTART_READ;
+[e ) . `E358 1 ]
+[e $UE 57  ]
+"129
+[; ;mcc_generated_files/examples/i2c1_master_example.c: 129: }
+[e :UE 57 ]
+}

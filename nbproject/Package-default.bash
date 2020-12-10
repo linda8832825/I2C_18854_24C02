@@ -10,9 +10,9 @@ CND_CONF=default
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/I2C_MCC_18854.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-OUTPUT_BASENAME=I2C_MCC_18854.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-PACKAGE_TOP_DIR=i2cmcc18854.x/
+OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/I2C_18854_24C02.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+OUTPUT_BASENAME=I2C_18854_24C02.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+PACKAGE_TOP_DIR=i2c1885424c02.x/
 
 # Functions
 function checkReturnCode
@@ -57,15 +57,15 @@ mkdir -p ${TMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory ${TMPDIR}/i2cmcc18854.x/bin
+makeDirectory ${TMPDIR}/i2c1885424c02.x/bin
 copyFileToTmpDir "${OUTPUT_PATH}" "${TMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/package/i2cmcc18854.x.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/package/i2c1885424c02.x.tar
 cd ${TMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/i2cmcc18854.x.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/i2c1885424c02.x.tar *
 checkReturnCode
 
 # Cleanup

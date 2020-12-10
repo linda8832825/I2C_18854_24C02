@@ -14,8 +14,8 @@ void main(void)
     uint8_t data = SLAVE_DATA;
     uint8_t data_read;
 
-//        I2C1_Write1ByteRegister(I2C_SLAVE_ADDR, SLAVE_REG_ADDR, data);
-//        __delay_ms(5000);
+        I2C1_Write1ByteRegister(I2C_SLAVE_ADDR, SLAVE_REG_ADDR, data);
+        __delay_ms(5000);
     
         data_read=I2C1_Read1ByteRegister(I2C_SLAVE_ADDR, SLAVE_REG_ADDR);
         if(data == data_read){
